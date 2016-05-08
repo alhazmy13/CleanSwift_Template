@@ -12,9 +12,6 @@ https://github.com/Clean-Swift/CleanStore
 -----------------
 ![http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/](http://fernandocejas.com/wp-content/uploads/2014/09/clean_architecture1.png)
 
-# Architectural approach
------------------
-![http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/](http://fernandocejas.com/wp-content/uploads/2014/09/clean_architecture_android.png)
 
 Architectural reactive approach
 -----------------
