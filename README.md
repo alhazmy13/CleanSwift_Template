@@ -17,6 +17,10 @@ https://github.com/Clean-Swift/CleanStore
 ![http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/](http://fernandocejas.com/wp-content/uploads/2014/09/clean_architecture_android.png)
 
 Architectural reactive approach
+-----------------
+![1](https://cloud.githubusercontent.com/assets/4659608/15095669/8564453e-14dc-11e6-8cbc-2afd74c76ddf.png)
+
+
 # Install
 
 To install the Clean Swift Xcode templates, run:
