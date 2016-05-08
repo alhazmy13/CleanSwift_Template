@@ -48,13 +48,13 @@
     </dict>
     <dict>
 			<key>Default</key>
-			<string>___VARIABLE_sceneName:identifier___Interactor</string>
+			<string>___VARIABLE_sceneName:identifier___Domain</string>
 			<key>Description</key>
-			<string>The interactor name</string>
+			<string>The Domain name</string>
 			<key>Identifier</key>
-			<string>interactorName</string>
+			<string>domainName</string>
 			<key>Name</key>
-			<string>Interactor Name:</string>
+			<string>Domain Name:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>
@@ -90,27 +90,13 @@
     </dict>
     <dict>
 			<key>Default</key>
-			<string>___VARIABLE_sceneName:identifier___Configurator</string>
+			<string>___VARIABLE_sceneName:identifier___RepoImpl</string>
 			<key>Description</key>
-			<string>The configurator name</string>
+			<string>The repoImpl name</string>
 			<key>Identifier</key>
-			<string>configuratorName</string>
+			<string>repoImplName</string>
 			<key>Name</key>
-			<string>Configurator Name:</string>
-			<key>Required</key>
-			<true/>
-			<key>Type</key>
-			<string>static</string>
-    </dict>
-    <dict>
-			<key>Default</key>
-			<string>___VARIABLE_sceneName:identifier___Worker</string>
-			<key>Description</key>
-			<string>The worker name</string>
-			<key>Identifier</key>
-			<string>workerName</string>
-			<key>Name</key>
-			<string>Worker Name:</string>
+			<string>RepoImpl Name:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>

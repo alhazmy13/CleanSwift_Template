@@ -12,25 +12,25 @@
 
 import UIKit
 
-protocol ___FILEBASENAMEASIDENTIFIER___InteractorInput {
+protocol ___FILEBASENAMEASIDENTIFIER___DomainInput {
   func doSomething(request: ___FILEBASENAMEASIDENTIFIER___Request)
 }
 
-protocol ___FILEBASENAMEASIDENTIFIER___InteractorOutput {
+protocol ___FILEBASENAMEASIDENTIFIER___DomainOutput {
   func presentSomething(response: ___FILEBASENAMEASIDENTIFIER___Response)
 }
 
-class ___FILEBASENAMEASIDENTIFIER___Interactor: ___FILEBASENAMEASIDENTIFIER___InteractorInput {
-  var output: ___FILEBASENAMEASIDENTIFIER___InteractorOutput!
-  var worker: ___FILEBASENAMEASIDENTIFIER___Worker!
+class ___FILEBASENAMEASIDENTIFIER___Domain: ___FILEBASENAMEASIDENTIFIER___DomainInput {
+  var output: ___FILEBASENAMEASIDENTIFIER___DomainOutput!
+  var repoImpl: ___FILEBASENAMEASIDENTIFIER___RepoImpl!
   
   // MARK: Business logic
   
   func doSomething(request: ___FILEBASENAMEASIDENTIFIER___Request) {
     // NOTE: Create some Worker to do the work
     
-    worker = ___FILEBASENAMEASIDENTIFIER___Worker()
-    worker.doSomeWork()
+    repoImpl = ___FILEBASENAMEASIDENTIFIER___RepoImpl()
+    repoImpl.doSomeWork()
     
     // NOTE: Pass the result to the Presenter
     
@@ -39,5 +39,3 @@ class ___FILEBASENAMEASIDENTIFIER___Interactor: ___FILEBASENAMEASIDENTIFIER___In
   }
 }
 
-extension ___FILEBASENAMEASIDENTIFIER___Interactor: ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput {
-}
