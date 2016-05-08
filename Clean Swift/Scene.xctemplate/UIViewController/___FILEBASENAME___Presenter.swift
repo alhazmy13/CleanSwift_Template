@@ -18,17 +18,17 @@ protocol ___FILEBASENAMEASIDENTIFIER___PresenterInput {
 
 class ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___PresenterInput {
    var output: ___FILEBASENAMEASIDENTIFIER___ViewControllerInput!
-   var domain: ___FILEBASENAMEASIDENTIFIER___Domain!
+   var service: ___FILEBASENAMEASIDENTIFIER___Service!
 
   // MARK: initial var
   init(){
-        domain = ___FILEBASENAMEASIDENTIFIER___Domain()
-        domain.output = self
+        service = ___FILEBASENAMEASIDENTIFIER___Service()
+        service.output = self
     }
   // MARK: Presentation logic
   
   func doSomething(request: ___FILEBASENAMEASIDENTIFIER___Request) {
-        domain.doSomething(request);
+        service.doSomething(request);
     }
     
     func presentSomething(response: ___FILEBASENAMEASIDENTIFIER___Response){
@@ -38,5 +38,5 @@ class ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___Pre
 
 }
 
-extension ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___DomainOutput {
+extension ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___ServiceOutput {
 }

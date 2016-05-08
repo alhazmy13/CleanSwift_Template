@@ -16,12 +16,9 @@ protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerInput {
   func displaySomething(viewModel: ___FILEBASENAMEASIDENTIFIER___ViewModel)
 }
 
-protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput {
-  func doSomething(request: ___FILEBASENAMEASIDENTIFIER___Request)
-}
 
 class ___FILEBASENAMEASIDENTIFIER___ViewController: UICollectionViewController, ___FILEBASENAMEASIDENTIFIER___ViewControllerInput {
-  var output: ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput!
+  var presenter: ___FILEBASENAMEASIDENTIFIER___Presenter!
   var router: ___FILEBASENAMEASIDENTIFIER___Router!
   
   // MARK: Object lifecycle
@@ -30,7 +27,8 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UICollectionViewController, 
     super.awakeFromNib()
     configure()
   }
-   // MARK: Configuration
+  
+  // MARK: Configuration
   
   func configure() {
     let router = ___FILEBASENAMEASIDENTIFIER___Router()
@@ -38,30 +36,18 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UICollectionViewController, 
     
     let presenter = ___FILEBASENAMEASIDENTIFIER___Presenter()
     presenter.output = self
+
     
-    let interactor = ___FILEBASENAMEASIDENTIFIER___Interactor()
-    interactor.output = presenter
-    
-    self.output = interactor
+    self.presenter = presenter
     self.router = router
   }
-  
   // MARK: View lifecycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    doSomethingOnLoad()
   }
   
-  // MARK: Event handling
-  
-  func doSomethingOnLoad() {
-    // NOTE: Ask the Interactor to do some work
-    
-    let request = ___FILEBASENAMEASIDENTIFIER___Request()
-    output.doSomething(request)
-  }
-  
+
   // MARK: Display logic
   
   func displaySomething(viewModel: ___FILEBASENAMEASIDENTIFIER___ViewModel) {
@@ -70,8 +56,5 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UICollectionViewController, 
     // nameTextField.text = viewModel.name
   }
 }
-extension ___FILEBASENAMEASIDENTIFIER___ViewController: ___FILEBASENAMEASIDENTIFIER___PresenterOutput {
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    router.passDataToNextScene(segue)
-  }
-}
+
+

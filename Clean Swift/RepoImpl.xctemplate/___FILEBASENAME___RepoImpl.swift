@@ -12,7 +12,7 @@
 
 import UIKit
 
-class ___FILEBASENAMEASIDENTIFIER___Worker {
+class ___FILEBASENAMEASIDENTIFIER___RepoImpl {
   // MARK: Business Logic
   
   func doSomeWork() {

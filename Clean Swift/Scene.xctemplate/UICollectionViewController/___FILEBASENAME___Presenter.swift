@@ -13,24 +13,30 @@
 import UIKit
 
 protocol ___FILEBASENAMEASIDENTIFIER___PresenterInput {
-  func presentSomething(response: ___FILEBASENAMEASIDENTIFIER___Response)
-}
-
-protocol ___FILEBASENAMEASIDENTIFIER___PresenterOutput: class {
-  func displaySomething(viewModel: ___FILEBASENAMEASIDENTIFIER___ViewModel)
+  func doSomething(request: ___FILEBASENAMEASIDENTIFIER___Request)
 }
 
 class ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___PresenterInput {
-  weak var output: ___FILEBASENAMEASIDENTIFIER___PresenterOutput!
-  
+   var output: ___FILEBASENAMEASIDENTIFIER___ViewControllerInput!
+   var service: ___FILEBASENAMEASIDENTIFIER___Service!
+
+  // MARK: initial var
+  init(){
+        service = ___FILEBASENAMEASIDENTIFIER___Service()
+        service.output = self
+    }
   // MARK: Presentation logic
   
-  func presentSomething(response: ___FILEBASENAMEASIDENTIFIER___Response) {
-    // NOTE: Format the response from the Interactor and pass the result back to the View Controller
+  func doSomething(request: ___FILEBASENAMEASIDENTIFIER___Request) {
+        service.doSomething(request);
+    }
     
-    let viewModel = ___FILEBASENAMEASIDENTIFIER___ViewModel()
-    output.displaySomething(viewModel)
-  }
+    func presentSomething(response: ___FILEBASENAMEASIDENTIFIER___Response){
+        let viewModel = ___FILEBASENAMEASIDENTIFIER___ViewModel()
+        output.displaySomething(viewModel)
+    }
+
 }
-extension ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___InteractorOutput{
+
+extension ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___ServiceOutput {
 }

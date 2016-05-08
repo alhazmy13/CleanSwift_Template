@@ -12,16 +12,16 @@
 
 import UIKit
 
-protocol ___FILEBASENAMEASIDENTIFIER___DomainInput {
+protocol ___FILEBASENAMEASIDENTIFIER___ServiceInput {
   func doSomething(request: ___FILEBASENAMEASIDENTIFIER___Request)
 }
 
-protocol ___FILEBASENAMEASIDENTIFIER___DomainOutput {
+protocol ___FILEBASENAMEASIDENTIFIER___ServiceOutput {
   func presentSomething(response: ___FILEBASENAMEASIDENTIFIER___Response)
 }
 
-class ___FILEBASENAMEASIDENTIFIER___Domain: ___FILEBASENAMEASIDENTIFIER___DomainInput {
-  var output: ___FILEBASENAMEASIDENTIFIER___DomainOutput!
+class ___FILEBASENAMEASIDENTIFIER___Service: ___FILEBASENAMEASIDENTIFIER___ServiceInput {
+  var output: ___FILEBASENAMEASIDENTIFIER___ServiceOutput!
   var repoImpl: ___FILEBASENAMEASIDENTIFIER___RepoImpl!
   
   // MARK: Business logic
