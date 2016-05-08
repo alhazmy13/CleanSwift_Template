@@ -29,3 +29,4 @@ To uninstall the Clean Swift Xcode templates, run:
 
 ## Credit 
 [Raymond](http://clean-swift.com)
+[Android-CleanArchitecture](https://github.com/android10/Android-CleanArchitecture)
