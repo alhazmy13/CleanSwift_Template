@@ -20,6 +20,10 @@ protocol ___FILEBASENAMEASIDENTIFIER___InteractorOutput {
   func presentSomething(response: ___FILEBASENAMEASIDENTIFIER___Response)
 }
 
+protocol ___FILEBASENAMEASIDENTIFIER___Repository {
+  func doSomeWork()
+}
+
 class ___FILEBASENAMEASIDENTIFIER___Interactor: ___FILEBASENAMEASIDENTIFIER___InteractorInput {
   var output: ___FILEBASENAMEASIDENTIFIER___InteractorOutput!
   var worker: ___FILEBASENAMEASIDENTIFIER___Worker!

@@ -20,6 +20,10 @@ protocol ___FILEBASENAMEASIDENTIFIER___ServiceOutput {
   func presentSomething(response: ___FILEBASENAMEASIDENTIFIER___Response)
 }
 
+protocol ___FILEBASENAMEASIDENTIFIER___Repository {
+  func doSomeWork()
+}
+
 class ___FILEBASENAMEASIDENTIFIER___Service: ___FILEBASENAMEASIDENTIFIER___ServiceInput {
   var output: ___FILEBASENAMEASIDENTIFIER___ServiceOutput!
   var repoImpl: ___FILEBASENAMEASIDENTIFIER___RepoImpl!
