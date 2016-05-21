@@ -1,4 +1,5 @@
 # Clean Code
+>The Clean Swift architecture is derived from the Clean Architecture proposed by Uncle Bob. They share many common concepts such as the components, boundaries, and models.
 
 To learn more about Clean Swift and the VIP cycle, read:
 
@@ -29,5 +30,5 @@ To uninstall the Clean Swift Xcode templates, run:
 > make uninstall_templates
 
 ## Credit 
-[Raymond](http://clean-swift.com)
-[Android-CleanArchitecture](https://github.com/android10/Android-CleanArchitecture)
+* [Raymond](http://clean-swift.com)
+* [Android-CleanArchitecture](https://github.com/android10/Android-CleanArchitecture)
